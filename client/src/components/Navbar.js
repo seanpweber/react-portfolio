@@ -3,7 +3,7 @@ import '../index.css';
 
 class Navbar extends Component {
     render () {
-        <nav id="navbar" class="navbar is-info is-fixed-top" role="navigation" aria-label="main navigation">
+        return <nav id="navbar" class="navbar is-info is-fixed-top" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <a class="navbar-item" href="">
                 <figure class="image is-64x64" style="margin-right: 10px">
