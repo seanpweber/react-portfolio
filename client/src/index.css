@@ -25,6 +25,16 @@ svg {
     color: #3E8ED0;
 }
 
+#emailIcon{
+    margin-left: 32px;
+}
+#githubIcon{
+    margin-left: 24px;
+}
+#linkedInIcon{
+    margin-left: 15px;
+}
+
 .box {
     margin: 20px;
 }
@@ -39,7 +49,7 @@ svg {
     width: 45%;
 }
 
-.workCard {
+.workCardImg {
     height: 150px;
     width: 100%;
     object-fit: cover;
@@ -56,6 +66,10 @@ svg {
     text-align: center;
     transition: all 0.75s;
     z-index: 1;
+}
+
+#topBtnText {
+    margin-right: 5px;
 }
 
 .hide {
