@@ -26,28 +26,28 @@ class Contact extends Component {
                 <div class="field">
                     <label class="label">Name</label>
                     <div class="control">
-                    <input class="input" type="text" name="name" placeholder="e.g. Johnny Appleseed" />
+                    <input class="input" type="text" name="name" placeholder="e.g. Johnny Appleseed" value={this.state.value} onChange={this.handleChange} />
                     </div>
                 </div>
                 
                 <div class="field">
                     <label class="label">Email</label>
                     <div class="control">
-                        <input class="input" type="email" name="email" placeholder="e.g. averycoolperson@email.com" />
+                        <input class="input" type="email" name="email" placeholder="e.g. averycoolperson@email.com" value={this.state.value} onChange={this.handleChange} />
                     </div>
                 </div>
                 
                 <div class="field">
                     <label class="label">Subject</label>
                     <div class="control">
-                    <input class="input" type="text" name="subject" placeholder="e.g. I would like to offer you a million dollars!" />
+                    <input class="input" type="text" name="subject" placeholder="e.g. I would like to offer you a million dollars!" value={this.state.value} onChange={this.handleChange} />
                     </div>
                 </div>
                 
                 <div class="field">
                     <label class="label">Message</label>
                     <div class="control">
-                        <textarea class="textarea" name="message" placeholder=""></textarea>
+                        <textarea class="textarea" name="message" placeholder="" value={this.state.value} onChange={this.handleChange} />
                     </div>
                 </div>
                 

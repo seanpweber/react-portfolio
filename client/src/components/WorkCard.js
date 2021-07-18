@@ -5,7 +5,9 @@ class WorkCard extends Component {
     render () {
         return <div class="card">
         <div class="card-image">
-            {this.props.image}
+            <a href={this.props.url} rel="noreferrer" target="_blank">
+                <img class="workCardImg" alt={this.props.altText} id={this.props.imageID} />
+            </a>
         </div>
         <div class="card-content">
             <div class="media">
