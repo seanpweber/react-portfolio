@@ -1,7 +1,8 @@
 import React, { Component, useState } from 'react';
 import * as emailjs from 'emailjs-com';
+import EmailSent from './EmailSent';
 import SendBtn from './SendBtn';
-import CancelBtn from './CancelBtn';
+// import CancelBtn from './CancelBtn';
 import '../index.css';
 
 class Contact extends Component {
@@ -16,9 +17,7 @@ class Contact extends Component {
         this.setState({ [param]: event.target.value })
     }
     
-    handleSubmit(event) {
-        event.preventDefault();
-
+    handleSend() {
         const { name, email, subject, message } = this.state
         let templateParams = {
             name: name,
@@ -34,10 +33,6 @@ class Contact extends Component {
             templateParams,
             'user_e2SBprNH4w0Ma1Ze0RS4r'
         )
-
-        alert("Your message has been sent!");
-
-        this.resetForm();
     }
 
     resetForm() {
@@ -47,6 +42,21 @@ class Contact extends Component {
             subject: '',
             message: '',
         })
+    }
+
+    showModal() {
+        //sets element to be manipulated as #emailSent
+        var myID = document.getElementById("emailSent");
+    
+        //shows modal
+        myID.style.display = "block";
+    }
+
+    handleSubmit(event) {
+        event.preventDefault();
+        this.handleSend();
+        this.showModal();
+        this.resetForm();
     }
 
     render () {
@@ -91,15 +101,7 @@ class Contact extends Component {
                 </form>
             </div>
 
-            <div id="emailSent" class="modal">
-            <div class="modal-background"></div>
-            <div class="modal-content">
-                <div class="box">
-                    <h5 class="title is-5">Thank you! Your message has been sent!</h5>
-                </div>
-            </div>
-                <button class="modal-close is-large" aria-label="close"></button>
-            </div>
+            <EmailSent />
         </div>
     }
 }
