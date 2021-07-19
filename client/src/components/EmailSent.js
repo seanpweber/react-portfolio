@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../index.css';
+import { .modal } from '../index.css';
 
 class EmailSent extends Component {
     render () {

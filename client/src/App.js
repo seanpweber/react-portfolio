@@ -1,5 +1,5 @@
 // @flow
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Anchor from './components/Anchor';
@@ -10,7 +10,10 @@ import WorkContainer from './components/WorkContainer';
 import Contact from './components/Contact';
 import BackToTop from './components/BackToTop';
 import Footer from './components/Footer';
+import scroll from './scripts/scroll.js';
 import './App.css';
+
+document.addEventListener('scroll', scroll);
 
 function App() {
   return (

@@ -3,7 +3,7 @@ import '../index.css';
 
 class Container extends Component {
     render () {
-        return <div class="content">
+        return <div id="bodyContainer" class="content">
             {this.props.children}
         </div>
     }

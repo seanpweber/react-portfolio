@@ -1,6 +1,5 @@
 import React, { Component, useState } from 'react';
 import * as emailjs from 'emailjs-com';
-import EmailSent from './EmailSent';
 import SendBtn from './SendBtn';
 import CancelBtn from './CancelBtn';
 import '../index.css';
@@ -85,14 +84,22 @@ class Contact extends Component {
                         </div>
                     </div>
                     
-                    <div class="buttons is-grouped is-justify-content-end">
+                    <div class="buttons is-grouped is-justify-content-flex-end">
                         <SendBtn />
-                        <CancelBtn />
+                        {/* <CancelBtn /> */}
                     </div>
                 </form>
             </div>
 
-            <EmailSent />
+            <div id="emailSent" class="modal">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+                <div class="box">
+                    <h5 class="title is-5">Thank you! Your message has been sent!</h5>
+                </div>
+            </div>
+                <button class="modal-close is-large" aria-label="close"></button>
+            </div>
         </div>
     }
 }
