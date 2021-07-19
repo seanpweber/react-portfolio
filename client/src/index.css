@@ -19,6 +19,10 @@ html {
     height: 75px;
 }
 
+#profileFigure {
+    margin-right: 10px;
+}
+
 svg {
     width: 24px;
     height: 24px;
@@ -33,6 +37,10 @@ svg {
 }
 #linkedInIcon{
     margin-left: 15px;
+}
+
+.content {
+    margin-top: 90px;
 }
 
 .box {
@@ -53,6 +61,10 @@ svg {
     height: 150px;
     width: 100%;
     object-fit: cover;
+}
+
+.modal-content {
+    top: 25px;
 }
 
 /* Button to return you to top of page anchor */

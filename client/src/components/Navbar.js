@@ -1,20 +1,12 @@
 import React, { Component } from 'react';
 import '../index.css';
-import headshotSrc from '../images/headshot.jpg';
-
-const headshotImg = document.getElementById('headshot');
-
-headshotImg.src = headshotSrc;
 
 class Navbar extends Component {
     render () {
         return <nav id="navbar" class="navbar is-info is-fixed-top" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-            <a class="navbar-item" href="https://seanpweber.herokuapp.com">
-                <figure id="profileFigure" class="image is-64x64" style="margin-right: 10px">
-                    <img class="is-rounded" alt="Profile" id="headshot"></img>
-                </figure>
-                <h1 class="title has-text-white">Sean Weber</h1>
+            <a class="navbar-item" href="/">
+                <h1 class="title has-text-white">zzzleepy.dev</h1>
             </a>
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
                 <span aria-hidden="true"></span>
@@ -24,10 +16,10 @@ class Navbar extends Component {
         </div>
 
         <div class="navbar-end">
-            <a class="navbar-item" href="#aboutMe">
+            <a class="navbar-item" href="/about">
                 About Me
             </a>
-            <a class="navbar-item" href="#work">
+            <a class="navbar-item" href="/work">
                 Work
             </a>
             <div class="navbar-item has-dropdown is-hoverable">
@@ -36,7 +28,7 @@ class Navbar extends Component {
                 </a>
 
                 <div class="navbar-dropdown">
-                    <a class="navbar-item has-text-info" href="mailto: sean.weber95@gmail.com" rel="noreferrer" target="_blank">
+                    <a class="navbar-item has-text-info" href="/contact">
                         Email
                         <svg id="emailIcon" viewBox="0 0 24 24">
                             <path fill="currentColor" d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z" />

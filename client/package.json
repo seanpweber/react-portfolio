@@ -7,6 +7,7 @@
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "bulma": "^0.9.3",
+    "emailjs-com": "^3.2.0",
     "flow-bin": "^0.155.1",
     "husky": "^7.0.1",
     "lint-staged": "^11.0.1",

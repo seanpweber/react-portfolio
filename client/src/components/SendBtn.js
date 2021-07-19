@@ -3,7 +3,7 @@ import '../index.css';
 
 class SendBtn extends Component {
     render () {
-        return <button id="sendBtn" class="button is-info">Send</button>
+        return <button type="submit" id="sendBtn" class="button is-info">Send</button>
     }
 }
 
