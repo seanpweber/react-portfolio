@@ -1,65 +1,107 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
+import * as emailjs from 'emailjs-com';
+import EmailSent from './EmailSent';
+import SendBtn from './SendBtn';
+// import CancelBtn from './CancelBtn';
 import '../index.css';
 
 class Contact extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {value: ''};
+    state = {
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+    }
     
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-      }
+    handleChange = (param, event) => {
+        this.setState({ [param]: event.target.value })
+    }
     
-      handleChange(event) {
-        this.setState({value: event.target.value});
-      }
+    handleSend() {
+        const { name, email, subject, message } = this.state
+        let templateParams = {
+            name: name,
+            email: email,
+            to_name: 'Sean',
+            subject: subject,
+            message: message,
+        }
+
+        emailjs.send(
+            'my_dev_gmail',
+            'template_j6ztv0i',
+            templateParams,
+            'user_e2SBprNH4w0Ma1Ze0RS4r'
+        )
+    }
+
+    resetForm() {
+        this.setState({
+            name: '',
+            email: '',
+            subject: '',
+            message: '',
+        })
+    }
+
+    showModal() {
+        //sets element to be manipulated as #emailSent
+        var myID = document.getElementById("emailSent");
     
-      handleSubmit(event) {
-        alert('A name was submitted: ' + this.state.value);
+        //shows modal
+        myID.style.display = "block";
+    }
+
+    handleSubmit(event) {
         event.preventDefault();
-      }
+        this.handleSend();
+        this.showModal();
+        this.resetForm();
+    }
 
     render () {
-        return <div class="box" id="contactMe">
-            <h3 class="title is-3">Contact Me</h3>
-            <form onSubmit={this.handleSubmit}>
-                <div class="field">
-                    <label class="label">Name</label>
-                    <div class="control">
-                    <input class="input" type="text" name="name" placeholder="e.g. Johnny Appleseed" value={this.state.value} onChange={this.handleChange} />
+
+
+        return <div>
+                <div class="box" id="contactMe">
+                <h3 class="title is-3">Contact Me</h3>
+                <form onSubmit={this.handleSubmit.bind(this)}>
+                    <div class="field">
+                        <label class="label">Name</label>
+                        <div class="control">
+                        <input class="input" type="text" name="name" placeholder="e.g. Johnny Appleseed" value={this.state.name} onChange={this.handleChange.bind(this, 'name')} />
+                        </div>
                     </div>
-                </div>
-                
-                <div class="field">
-                    <label class="label">Email</label>
-                    <div class="control">
-                        <input class="input" type="email" name="email" placeholder="e.g. averycoolperson@email.com" value={this.state.value} onChange={this.handleChange} />
+                    
+                    <div class="field">
+                        <label class="label">Email</label>
+                        <div class="control">
+                            <input class="input" type="email" name="email" placeholder="e.g. averycoolperson@email.com" value={this.state.email} onChange={this.handleChange.bind(this, 'email')} />
+                        </div>
                     </div>
-                </div>
-                
-                <div class="field">
-                    <label class="label">Subject</label>
-                    <div class="control">
-                    <input class="input" type="text" name="subject" placeholder="e.g. I would like to offer you a million dollars!" value={this.state.value} onChange={this.handleChange} />
+                    
+                    <div class="field">
+                        <label class="label">Subject</label>
+                        <div class="control">
+                        <input class="input" type="text" name="subject" placeholder="e.g. I would like to offer you a million dollars!" value={this.state.subject} onChange={this.handleChange.bind(this, 'subject')} />
+                        </div>
                     </div>
-                </div>
-                
-                <div class="field">
-                    <label class="label">Message</label>
-                    <div class="control">
-                        <textarea class="textarea" name="message" placeholder="" value={this.state.value} onChange={this.handleChange} />
+                    
+                    <div class="field">
+                        <label class="label">Message</label>
+                        <div class="control">
+                            <textarea class="textarea" name="message" placeholder="" value={this.state.message} onChange={this.handleChange.bind(this, 'message')} />
+                        </div>
                     </div>
-                </div>
-                
-                <div class="field is-grouped">
-                    <div class="control">
-                        {this.props.send}
+                    
+                    <div class="buttons is-grouped is-justify-content-flex-end">
+                        <SendBtn />
+                        {/* <CancelBtn /> */}
                     </div>
-                    <div class="control">
-                        {this.props.cancel}
-                    </div>
-                </div>
-            </form>
+                </form>
+            </div>
+
+            <EmailSent />
         </div>
     }
 }

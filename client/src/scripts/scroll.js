@@ -12,7 +12,4 @@ export default function scroll() {
             myID.className = "button is-info hide"
         }
     };
-
-    //listens for scroll event to trigger function
-    window.addEventListener("scroll", myScrollFunc);
 };

@@ -3,7 +3,7 @@ import '../index.css';
 
 class CancelBtn extends Component {
     render () {
-        return <button id="cancelBtn" class="button is-info is-light">Cancel</button>
+        return <button type="reset" id="cancelBtn" class="button is-info is-light">Cancel</button>
     }
 }
 
