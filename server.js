@@ -2,20 +2,21 @@ console.log("server started");
 
 const express = require('express');
 const bodyParser = require('body-parser');
-const routes = require('./app/routes');
-const sequelize = require('./app/config/connection.js');
+const routes = require('./app/routes/api/project.routes');
+const sequelize = require('./app/config/connection');
+
 const app = express();
-// const serv = require('http').Server(app);
 var PORT = process.env.PORT || 4000;
+// const serv = require('http').Server(app);
 
 app.use(bodyParser.json());
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(routes);
+app.use('/api/projects', routes);
 
 app.get("/", (req, res) => {
-    res.json({ message: "Welcome to zzzleepy's website." });
+    res.json({ message: "Welcome to zzzleepy's server." });
   });
 
 app.get('/',function(req, res) {//listens for when the client opens the site.

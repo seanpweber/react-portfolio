@@ -1,22 +1,22 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import '../index.css';
 
 class WorkCard extends Component {
     render () {
-        constructor() {
-            state = {
-                projects: []
-            }
-        }
+        // constructor() {
+        //     state = {
+        //         projects: []
+        //     }
+        // }
 
-        componentDidMount() {
-            axios.get(`https://jsonplaceholder.typicode.com/users`)
-              .then(res => {
-                const users = res.data;
-                this.setState({ projects });
-              })
-          } 
+        // componentDidMount() {
+        //     axios.get(`https://jsonplaceholder.typicode.com/users`)
+        //       .then(res => {
+        //         const users = res.data;
+        //         this.setState({ projects });
+        //       })
+        //   } 
 
         return <div class="card">
         <div class="card-image">
