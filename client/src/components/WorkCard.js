@@ -1,8 +1,23 @@
 import React, { Component } from 'react';
+// import axios from 'axios';
 import '../index.css';
 
 class WorkCard extends Component {
     render () {
+        // constructor() {
+        //     state = {
+        //         projects: []
+        //     }
+        // }
+
+        // componentDidMount() {
+        //     axios.get(`https://jsonplaceholder.typicode.com/users`)
+        //       .then(res => {
+        //         const users = res.data;
+        //         this.setState({ projects });
+        //       })
+        //   } 
+
         return <div class="card">
         <div class="card-image">
             <a href={this.props.url} rel="noreferrer" target="_blank">

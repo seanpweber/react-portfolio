@@ -1,4 +1,4 @@
-const Project = require("../models/project.model.js");
+const Project = require("../models/Project.js");
 
 // Create and Save a new Project
 exports.create = (req, res) => {
@@ -42,15 +42,15 @@ exports.findAll = (req, res) => {
 
 // Find a single Project with a projectId
 exports.findOne = (req, res) => {
-    Project.findById(req.params.projectId, (err, data) => {
+    Project.findById(req.params.id, (err, data) => {
         if (err) {
             if (err.kind === "not_found") {
                 res.status(404).send({
-                message: `Not found Project with id ${req.params.projectId}.`
+                message: `Not found Project with id ${req.params.id}.`
                 });
             } else {
                 res.status(500).send({
-                message: "Error retrieving Project with id " + req.params.projectId
+                message: "Error retrieving Project with id " + req.params.id
                 });
             }
         } else res.send(data);
@@ -67,17 +67,17 @@ exports.update = (req, res) => {
     }
     
     Project.updateById(
-        req.params.projectId,
+        req.params.id,
         new Project(req.body),
         (err, data) => {
           if (err) {
                 if (err.kind === "not_found") {
                 res.status(404).send({
-                    message: `Not found Project with id ${req.params.projectId}.`
+                    message: `Not found Project with id ${req.params.id}.`
                 });
                 } else {
                 res.status(500).send({
-                    message: "Error updating Project with id " + req.params.projectId
+                    message: "Error updating Project with id " + req.params.id
                 });
                 }
             } else res.send(data);
@@ -87,15 +87,15 @@ exports.update = (req, res) => {
 
 // Delete a Project with the specified projectId in the request
 exports.delete = (req, res) => {
-    Project.remove(req.params.projectId, (err, data) => {
+    Project.remove(req.params.id, (err, data) => {
         if (err) {
             if (err.kind === "not_found") {
                 res.status(404).send({
-                message: `Not found Project with id ${req.params.projectId}.`
+                message: `Not found Project with id ${req.params.id}.`
                 });
             } else {
                 res.status(500).send({
-                message: "Could not delete Project with id " + req.params.projectId
+                message: "Could not delete Project with id " + req.params.id
                 });
             }
         } else res.send({ message: `Project was deleted successfully!` });
