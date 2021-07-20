@@ -59,7 +59,8 @@ svg {
 }
 
 .box {
-    margin: 20px;
+    margin: 0 auto 0 auto;
+    width: 85%;
     background-color: rgb(27, 27, 27);
 }
 
