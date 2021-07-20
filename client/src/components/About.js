@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import BodyImg from './BodyImg';
 import '../index.css';
 
 class About extends Component {
