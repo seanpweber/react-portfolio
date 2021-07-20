@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import '../index.css';
-import computer from '../images/computer.jpg'
+import headshot from '../images/headshot.png'
 
 class BodyImg extends Component {
     render () {
-        return <div><img src={computer} alt={this.props.alt} /></div>
+        return <div id="bodyImage"><img src={headshot} alt={this.props.alt} /></div>
     }
 }
 

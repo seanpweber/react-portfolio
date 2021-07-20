@@ -5,7 +5,7 @@ import '../index.css';
 class WorkContainer extends Component {
     render () {
         return <div class="box">
-            <h3 class="title is-3">Work</h3>
+            <p class="title is-3">Work</p>
             <WorkCard />
         </div>
     }
