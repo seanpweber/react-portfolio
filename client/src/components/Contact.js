@@ -64,7 +64,7 @@ class Contact extends Component {
 
         return <div>
                 <div class="box" id="contactMe">
-                <h3 class="title is-3">Contact Me</h3>
+                <p class="title is-3">Contact Me</p>
                 <form onSubmit={this.handleSubmit.bind(this)}>
                     <div class="field">
                         <label class="label">Name</label>
