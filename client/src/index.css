@@ -1,18 +1,43 @@
 @import 'bulma/css/bulma.css';
 
 /* Universal styles */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    background-color: #242424;
+    background-image: linear-gradient(45deg, #242424, #242424, #6e6e6e, #242424, #242424);
+    background-attachment: fixed;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin: 0;
+    min-height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 html {
-    background-color: #242424;
+    height: 100vh;
+    width: 100vw;
     scroll-behavior: smooth;
+}
+
+#root, .App {
+    height: 100vh;
+}
+
+.padding {
+    min-height: calc(100vh - 96px);
+    margin: 0;
+    padding-top: 75px;
+    padding-bottom: 25px;
+    display: flex;
 }
 
 .title, .label {
@@ -31,10 +56,18 @@ html {
     color: white;
 }
 
+.navbar-dropdown {
+    background-color:rgb(27, 27, 27);
+}
+
+.is-hoverable {
+    background-color: rgb(27, 27, 27);
+}
+
 svg {
     width: 24px;
     height: 24px;
-    color: #242424;
+    color: #6e6e6e;
 }
 
 #emailIcon{
@@ -59,7 +92,7 @@ svg {
 }
 
 .box {
-    margin: 0 auto 0 auto;
+    margin: auto auto;
     width: 85%;
     background-color: rgb(27, 27, 27);
 }
@@ -74,21 +107,37 @@ svg {
     flex-wrap: wrap;
 }
 
+.workBox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 .card {
     margin: 20px;
     width: 45%;
+    background-color: #414141;
+    border-radius: 0;
+}
+
+.card-content {
+    border-top: 2px solid #242424;
 }
 
 .workCardImg {
     height: 150px;
     width: 100%;
     object-fit: cover;
+    margin: 4px;
+}
+
+#workDescription {
+    color: rgb(190, 190, 190);
 }
 
 /* Contact styles */
 #contactMe {
     max-width: 1200px;
-    margin: auto;
 }
 
 input, textarea {
@@ -117,11 +166,11 @@ input.input::placeholder {
 /* Footer styles */
 .footer {
     background-color: rgb(27, 27, 27);
-    position: fixed;
-    bottom: 0;
+    position: relative;
+    bottom: 0px;
     width: 100%;
-    height: 50px;
     border-radius:8px 8px 0px 0px;
+    padding: 3rem 1.5rem 2rem;
 }
 
 #footerSign {

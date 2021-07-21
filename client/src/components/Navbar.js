@@ -16,7 +16,7 @@ class Navbar extends Component {
             </a>
         </div>
 
-        <div class="navbar-end">
+        <div class="navbar-end is-hidden-mobile">
             <a class="navbar-item" href="/about">
                 About Me
             </a>

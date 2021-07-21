@@ -19,13 +19,13 @@ class WorkCard extends Component {
 
     render () {
         return (
-            <div>
+            <div class="workBox">
                 {
                     this.state.projects.map( project =>
                     <div class="card">
                         <div class="card-image">
                             <a href={project.url} rel="noreferrer" target="_blank">
-                                <img class="workCardImg" alt="alt-text" id={project.image} />
+                                <img class="workCardImg" alt="alt-text" src={project.image} />
                             </a>
                         </div>
                         <div class="card-content">
@@ -37,7 +37,7 @@ class WorkCard extends Component {
                                 </div>
                             </div>
                         
-                            <div class="content">
+                            <div id="workDescription" class="content">
                                 {project.description}
                             </div>
                         </div>

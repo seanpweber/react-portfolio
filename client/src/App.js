@@ -21,14 +21,14 @@ function App() {
       <div className="App">
         <Navbar />
         <Anchor />
-        <Route exact path="/" component={BodyImg} />
-        <Container>
-          <Route exact path="/about" component={About} />
-          <Route exact path="/work" component={WorkContainer} />
-          <Route exact path="/contact" component={Contact} />
-        </Container>
-        <BackToTop />
-        <Footer />
+          <div className="padding">
+            <Route exact path="/" component={BodyImg} />
+            <Route exact path="/about" component={About} />
+            <Route exact path="/work" component={WorkContainer} />
+            <Route exact path="/contact" component={Contact} />
+          </div>
+          <BackToTop />
+          <Footer />
       </div>
     </Router>
   );

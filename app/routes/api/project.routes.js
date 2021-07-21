@@ -22,7 +22,6 @@ router.get('/', async (req, res) => {
     });
     res.json(projectData);
   });
-  
 
 // POST create a new project
 router.post('/', async (req, res) => {
@@ -70,9 +69,12 @@ router.delete('/:id', async (req, res) => {
     }
   });
 
-// DELETE all projects
+// RESET table !!NOTE: All entries will be deleted. Be careful with this one.
 router.delete('/', async (req, res) => {
-    const projectData = await Project.destroy().catch((err) => {
+    const projectData = await Project.destroy({
+        where: {},
+        truncate: true
+      }).catch((err) => {
       res.json(err);
     });
     res.json(projectData);;
