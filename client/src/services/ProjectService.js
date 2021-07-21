@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const PROJECT_API_BASE_URL = "mysql://b4116b93406311:8013802f@us-cdbr-east-04.cleardb.com/heroku_2d2fbea0d3311b2?reconnect=true"
+const PROJECT_API_BASE_URL = "us-cdbr-east-04.cleardb.com"
 
 class ProjectService {
 
