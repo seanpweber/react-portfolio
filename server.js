@@ -18,9 +18,9 @@ app.use(cors());
 
 app.use('/api/projects', routes);
 
-app.get("/", (req, res) => {
-    res.json({ message: "Welcome to zzzleepy's server." });
-  });
+// app.get("/", (req, res) => {
+//     res.json({ message: "Welcome to zzzleepy's server." });
+//   });
 
 app.get('/',function(req, res) {//listens for when the client opens the site.
     res.sendFile(__dirname + '/client/public/index.html');
