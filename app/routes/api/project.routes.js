@@ -25,7 +25,7 @@ router.get('/', async (req, res) => {
   
 
 // POST create a new project
-router.post('/:id', async (req, res) => {
+router.post('/', async (req, res) => {
   try {
     const projectData = await Project.create(req.body);
     res.status(200).json(projectData);
@@ -68,6 +68,14 @@ router.delete('/:id', async (req, res) => {
     } catch (err) {
       res.status(500).json(err);
     }
+  });
+
+// DELETE all projects
+router.delete('/', async (req, res) => {
+    const projectData = await Project.destroy().catch((err) => {
+      res.json(err);
+    });
+    res.json(projectData);;
   });
 
 module.exports = router;

@@ -8,7 +8,7 @@ class ProjectService {
         return axios.get(PROJECT_API_BASE_URL);
     }
 
-    createProjects(project){
+    createProject(project){
         return axios.post(PROJECT_API_BASE_URL, project);
     }
 
