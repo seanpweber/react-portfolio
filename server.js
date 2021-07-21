@@ -16,6 +16,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(cors());
 
+app.get('/projects/:id', function (req, res, next) {
+  res.json({msg: 'This is CORS-enabled for all origins!'})
+})
+
 app.use('/api/projects', routes);
 
 app.get("/", (req, res) => {
