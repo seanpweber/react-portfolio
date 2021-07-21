@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const PROJECT_API_BASE_URL = "http://localhost:4000/api/projects";
+const PROJECT_API_BASE_URL = "http://zzzleepy.herokuapp.com/api/projects"
 
 class ProjectService {
 
