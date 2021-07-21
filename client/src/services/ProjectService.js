@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-let PROJECT_API_BASE_URL = "https://zzzllepy.herokuapp.com/api/projects";
+let PROJECT_API_BASE_URL = "https://zzzleepy-proxy.herokuapp.com/https://zzzllepy.herokuapp.com/api/projects";
 
 // if (process.env.NODE_ENV === "development") {
 //     PROJECT_API_BASE_URL = "http://localhost:4000/api/projects"
