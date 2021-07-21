@@ -1,4 +1,5 @@
 @import 'bulma/css/bulma.css';
+@import './fonts/font.css';
 
 /* Universal styles */
 
@@ -15,9 +16,7 @@ body {
     overflow-x: hidden;
     margin: 0;
     min-height: 100vh;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    font-family: 'jetbrains_monomedium';
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -38,55 +37,15 @@ html {
     padding-top: 75px;
     padding-bottom: 25px;
     display: flex;
+    flex-direction: column;
 }
 
-.title, .label {
-    color: rgb(190, 190, 190);
-}
-
-/* Navbar styles */
-.navbar {
-    height: 50px;
-    border-radius: 0px 0px 8px 8px;
-    background-color: rgb(27, 27, 27);
-}
-
-.navbar-item, .navbar-link {
-    margin-top: 0px;
-    color: white;
-}
-
-.navbar-dropdown {
-    background-color:rgb(27, 27, 27);
-}
-
-.is-hoverable {
-    background-color: rgb(27, 27, 27);
-}
-
-svg {
-    width: 24px;
-    height: 24px;
-    color: #6e6e6e;
-}
-
-#emailIcon{
-    margin-left: 32px;
-}
-#githubIcon{
-    margin-left: 24px;
-}
-#linkedInIcon{
-    margin-left: 15px;
-}
-
-#bodyContainer {
-    margin-top: 90px;
+.title, .label, .box p {
+    color: rgb(223, 223, 223);
 }
 
 /* Homepage styles */
 #bodyImage {
-    padding-top: 85px;
     width: 200px;
     margin: auto;
 }
@@ -95,88 +54,7 @@ svg {
     margin: auto auto;
     width: 85%;
     background-color: rgb(27, 27, 27);
-}
-
-.box p {
-    color:rgb(190, 190, 190);
-}
-
-/* Work styles */
-#work {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.workBox {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.card {
-    margin: 20px;
-    width: 45%;
-    background-color: #414141;
-    border-radius: 0;
-}
-
-.card-content {
-    border-top: 2px solid #242424;
-}
-
-.workCardImg {
-    height: 150px;
-    width: 100%;
-    object-fit: cover;
-    margin: 4px;
-}
-
-#workDescription {
-    color: rgb(190, 190, 190);
-}
-
-/* Contact styles */
-#contactMe {
-    max-width: 1200px;
-}
-
-input, textarea {
-    border: 5px;
-}
-
-input.input, textarea.textarea {
-    background-color: #333333;
-}
-
-input.input::placeholder {
-    color:rgb(98, 98, 98);
-}
-
-.modal-content {
-    top: 25px;
-}
-
-/* Send button styles */
-#sendBtn {
-    background-color: seagreen;
-    color:rgb(248, 248, 248);
-    border: none;
-}
-
-/* Footer styles */
-.footer {
-    background-color: rgb(27, 27, 27);
-    position: relative;
-    bottom: 0px;
-    width: 100%;
-    border-radius:8px 8px 0px 0px;
-    padding: 3rem 1.5rem 2rem;
-}
-
-#footerSign {
-    position: relative;
-    top: 3px;
-    height: 14px;
+    box-shadow: 0px 20px 25px rgb(27, 27, 27);
 }
 
 /* BackToTop button styles */
@@ -208,6 +86,10 @@ input.input::placeholder {
 a:hover, .backToTop:hover {
     opacity: 0.85;
     transition: 0.75s;
+}
+
+.navbar-item:hover {
+    color:rgb(98, 59, 134);
 }
 
 .backToTop:visited {

@@ -2,8 +2,7 @@ import React, { Component, useState } from 'react';
 import * as emailjs from 'emailjs-com';
 import EmailSent from './EmailSent';
 import SendBtn from './SendBtn';
-// import CancelBtn from './CancelBtn';
-import '../index.css';
+import '../styles/contact.css'
 
 class Contact extends Component {
     state = {
@@ -19,20 +18,28 @@ class Contact extends Component {
     
     handleSend() {
         const { name, email, subject, message } = this.state
-        let templateParams = {
-            name: name,
-            email: email,
-            to_name: 'Sean',
-            subject: subject,
-            message: message,
-        }
+        if (name === '' || email === '' || subject === '' || message === '') {
+            alert("Please complete the form!");
+            return;
+        } else {
+            let templateParams = {
+                name: name,
+                email: email,
+                to_name: 'Sean',
+                subject: subject,
+                message: message,
+            }
 
-        emailjs.send(
-            'my_dev_gmail',
-            'template_j6ztv0i',
-            templateParams,
-            'user_e2SBprNH4w0Ma1Ze0RS4r'
-        )
+            emailjs.send(
+                'my_dev_gmail',
+                'template_j6ztv0i',
+                templateParams,
+                'user_e2SBprNH4w0Ma1Ze0RS4r'
+            )
+
+            this.showModal();
+            this.resetForm();
+        }
     }
 
     resetForm() {
@@ -55,8 +62,6 @@ class Contact extends Component {
     handleSubmit(event) {
         event.preventDefault();
         this.handleSend();
-        this.showModal();
-        this.resetForm();
     }
 
     render () {

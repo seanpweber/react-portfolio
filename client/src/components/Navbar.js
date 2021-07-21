@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
+import '../styles/navbar.css';
 import zzzleepy from '../images/zzzleepy-dev-white.png';
-import '../index.css';
 
 class Navbar extends Component {
     render () {
@@ -16,7 +16,7 @@ class Navbar extends Component {
             </a>
         </div>
 
-        <div class="navbar-end is-hidden-mobile">
+        <div class="navbar-end is-hidden-touch">
             <a class="navbar-item" href="/about">
                 About Me
             </a>

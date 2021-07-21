@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import WorkCard from './WorkCard';
-import '../index.css';
+import '../styles/work.css';
 
 class WorkContainer extends Component {
     render () {
         return <div class="box">
-            <p class="title is-3">Work</p>
+            <p id="workContainer" class="title is-3">Work</p>
             <WorkCard />
         </div>
     }

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import '../index.css';
 import headshot from '../images/headshot.png'
 
 class BodyImg extends Component {

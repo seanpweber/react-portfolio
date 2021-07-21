@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import ProjectService from '../services/ProjectService';
-import '../index.css';
 
 class WorkCard extends Component {
     constructor(props) {
@@ -30,11 +29,9 @@ class WorkCard extends Component {
                         </div>
                         <div class="card-content">
                             <div class="media">
-                                <div class="media-content">
-                                    <p class="title is-4">
+                                    <p id="workTitle" class="title is-7">
                                         {project.title}
                                     </p>
-                                </div>
                             </div>
                         
                             <div id="workDescription" class="content">
