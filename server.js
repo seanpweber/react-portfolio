@@ -20,12 +20,11 @@ app.use('/api/projects', routes);
 
 app.get("/", (req, res) => {
     res.json({ message: "Welcome to zzzleepy's server." });
-    res.sendFile(__dirname + '/client/public/index.html');
   });
 
-// app.get('/',function(req, res) {//listens for when the client opens the site.
-    
-// });
+app.get('/',(req, res) {//listens for when the client opens the site.
+    res.sendFile(__dirname + '/client/public/index.html');
+});
 
 app.use('/client',express.static(__dirname + '/client'));
 
