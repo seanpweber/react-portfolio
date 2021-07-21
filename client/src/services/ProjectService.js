@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const PROJECT_API_BASE_URL = "us-cdbr-east-04.cleardb.com"
+const PROJECT_API_BASE_URL = "us-cdbr-east-04.cleardb.com/api/projects"
 
 class ProjectService {
 

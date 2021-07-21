@@ -2,7 +2,7 @@ const Sequelize = require('sequelize');
 require('dotenv').config();
 
 const sequelize = new Sequelize(
-  "heroku_2d2fbea0d3311b2",
+  "shnoy8tymsftn959",
   "hc1hnvycdvq51eh2",
   "n08at22zr7wm9m61",
   {
