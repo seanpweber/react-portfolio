@@ -1,6 +1,12 @@
 import axios from 'axios';
 
-const PROJECT_API_BASE_URL = "ohunm00fjsjs1uzy.cbetxkdyhwsb.us-east-1.rds.amazonaws.com/api/projects"
+let PROJECT_API_BASE_URL;
+
+if (process.env.NODE_ENV === "production") {
+    PROJECT_API_BASE_URL = "ohunm00fjsjs1uzy.cbetxkdyhwsb.us-east-1.rds.amazonaws.com/api/projects"
+  } else {
+    PROJECT_API_BASE_URL = "http://localhost:4000/api/projects"
+  }
 
 class ProjectService {
 
