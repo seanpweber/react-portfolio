@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../index.css';
+import '../styles/sendBtn.css';
 
 class SendBtn extends Component {
     render () {

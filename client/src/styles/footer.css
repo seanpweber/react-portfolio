@@ -1,0 +1,45 @@
+/* Footer styles */
+footer {
+    background-color: rgb(27, 27, 27);
+    position: relative;
+    bottom: 0px;
+    height: 96px;
+    width: 100%;
+    border-radius:8px 8px 0px 0px;
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+}
+
+ul {
+    border-right: 2px solid rgb(187, 187, 187);
+    margin-left: 20px;
+    text-align: right;
+}
+
+li {
+    font-size: 0.75rem;
+    margin-right: 15px;
+}
+
+li a {
+    color:rgb(187, 187, 187);
+}
+
+#footerSign {
+    position: relative;
+    top: 3px;
+    height: 14px;
+}
+
+#footerTxt {
+    margin: auto;
+    text-align: center;
+    width: 100%;
+    line-height: 2;
+    font-size: small;
+}
+
+#copyright {
+    font-size: xx-small;
+}

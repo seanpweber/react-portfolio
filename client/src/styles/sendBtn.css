@@ -1,0 +1,6 @@
+/* Send button styles */
+#sendBtn {
+    background-color: seagreen;
+    color:rgb(248, 248, 248);
+    border: none;
+}

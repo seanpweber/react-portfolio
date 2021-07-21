@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../styles/emailSent.css';
 
 class EmailSent extends Component {
     hideModal() {

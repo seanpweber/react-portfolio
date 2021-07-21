@@ -1,0 +1,31 @@
+/* Contact styles */
+#contactMe {
+    max-width: 1200px;
+    margin: auto;
+}
+
+p, label {
+    text-align: left;
+}
+
+label {
+    position: relative;
+    left: 10px;
+}
+
+input, textarea {
+    border: 5px;
+}
+
+input.input, textarea.textarea {
+    background-color: #333333;
+    color: #d1d1d1;
+}
+
+input.input::placeholder {
+    color:rgb(98, 98, 98);
+}
+
+.modal-content {
+    top: 25px;
+}
