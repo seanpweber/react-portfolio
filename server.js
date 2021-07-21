@@ -26,7 +26,9 @@ app.get('/', (req, res) => {//listens for when the client opens the site.
     res.sendFile(__dirname + '/client/public/index.html');
 });
 
-app.use('/client',express.static(__dirname + '/client'));
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
