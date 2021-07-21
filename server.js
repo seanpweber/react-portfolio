@@ -22,7 +22,7 @@ app.get("/", (req, res) => {
     res.json({ message: "Welcome to zzzleepy's server." });
   });
 
-app.get('/',(req, res) {//listens for when the client opens the site.
+app.get('/', (req, res) => {//listens for when the client opens the site.
     res.sendFile(__dirname + '/client/public/index.html');
 });
 
