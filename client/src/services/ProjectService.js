@@ -1,12 +1,12 @@
 import axios from 'axios';
 
-let PROJECT_API_BASE_URL = "https://zzzleepy.herokuapp.com/api/projects";
+let PROJECT_API_BASE_URL
 
-// if (process.env.NODE_ENV === "development") {
-//     PROJECT_API_BASE_URL = "http://localhost:4000/api/projects"
-//   } else {
-//     PROJECT_API_BASE_URL = "ohunm00fjsjs1uzy.cbetxkdyhwsb.us-east-1.rds.amazonaws.com/api/projects"
-//   }
+if (process.env.NODE_ENV === "development") {
+    PROJECT_API_BASE_URL = "http://localhost:4000/api/projects"
+  } else {
+    PROJECT_API_BASE_URL = "ohunm00fjsjs1uzy.cbetxkdyhwsb.us-east-1.rds.amazonaws.com/api/projects"
+  }
 
 class ProjectService {
 
