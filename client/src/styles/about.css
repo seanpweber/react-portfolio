@@ -1,6 +1,11 @@
 /* About Me styles */
+#aboutImg {
+    margin-bottom: 25px;
+}
+
 #aboutMe {
     margin-top: 15px;
+    max-width: 750px;
 }
 
 p {

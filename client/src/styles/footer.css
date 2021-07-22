@@ -12,8 +12,8 @@ footer {
 }
 
 ul {
+    max-width: 101px;
     border-right: 2px solid rgb(187, 187, 187);
-    margin-left: 20px;
     text-align: right;
 }
 
@@ -35,11 +35,47 @@ li a {
 #footerTxt {
     margin: auto;
     text-align: center;
-    width: 100%;
     line-height: 2;
     font-size: small;
 }
 
 #copyright {
     font-size: xx-small;
+}
+
+#icons {
+    margin: auto 5px 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+#icons>a>svg {
+    color: #DFDFDF;
+    font-size: 20px;
+    margin: auto 5px;
+    transition: 0.5s ease-in-out;
+}
+
+#icons>a>svg:hover {
+    color:rgb(126, 80, 163);
+}
+
+/* Media Queries */
+@media only screen and (min-width: 35em) {
+    #icons {
+        margin: 5px;
+        flex-direction: row;
+    }
+
+    #icons>a {
+        margin: auto;
+    }
+
+    #icons>a>svg {
+        color: #DFDFDF;
+        font-size: 28px;
+        width: 28px;
+        height: 28px;
+        transition: 0.5s ease-in-out;
+    }
 }
