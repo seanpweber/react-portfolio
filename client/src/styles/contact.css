@@ -4,6 +4,74 @@
     margin: auto;
 }
 
+#shake {
+    margin-bottom: 25px;
+}
+
+#shake>svg {
+    color: rgb(231, 231, 231);
+}
+
+#contact {
+    min-height: calc(100vh - 196px);
+    max-width: 85vw;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#contactPara {
+    margin: 0px auto 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+h5 {
+    text-align: left;
+}
+
+h6 {
+    /* margin: auto auto; */
+    text-align: right;
+}
+
+#linksBox{
+    margin: auto auto 0px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+#links {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#links>a {
+    display: block;
+    width: 100%;
+    margin: 5px 10px;
+}
+
+#contactTab {
+    min-width: 205px;
+    display: flex;
+    flex-direction: row;
+    bottom: 0;
+    transform: translateY(0px);
+    transition: 0.3s ease-in-out;
+}
+
+#contactTab>div {
+    margin-right: 10px;
+    flex-basis: 25%;
+}
+
+#contactTab>p {
+    flex-basis: 75%;
+    align-self: center;
+}
+
 p, label {
     text-align: left;
 }
@@ -28,4 +96,35 @@ input.input::placeholder {
 
 .modal-content {
     top: 25px;
+}
+
+/* Effects */
+#contactTab:hover {
+    transform: translateY(-8px)
+}
+
+/* Media Queries */
+@media only screen and (min-width: 35em) {
+    #contact {
+        max-width: 72vw;
+
+    }#linksBox {
+        margin: auto auto 20%;
+    }
+}
+
+@media only screen and (min-width: 58em) {
+
+    #links {
+        flex-flow: row;
+    }
+
+    #linksBox {
+        margin: auto 20%;
+    }
+
+    #contactTab {
+        width: 22vw;
+    }
+
 }
