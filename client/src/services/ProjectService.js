@@ -1,11 +1,12 @@
 import axios from 'axios';
+require('dotenv').config();
 
 let PROJECT_API_BASE_URL
 
-if (process.env.NODE_ENV === "development") {
-    PROJECT_API_BASE_URL = "http://localhost:4000/api/projects"
+if (process.env.NODE_ENV === "JAWSDB_URL") {
+    PROJECT_API_BASE_URL = process.env.JAWSDB_URL;
   } else {
-    PROJECT_API_BASE_URL = "ohunm00fjsjs1uzy.cbetxkdyhwsb.us-east-1.rds.amazonaws.com/api/projects"
+    PROJECT_API_BASE_URL = "localhost:3000/api/projects"
   }
 
 class ProjectService {
