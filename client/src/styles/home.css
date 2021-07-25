@@ -1,0 +1,46 @@
+/* Home styles */
+#home {
+    margin: auto auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#homeContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 15px 0px 15px;
+    max-width: 750px;
+}
+
+#homeContent>h4, #homeContent>h5, #workTab>p {
+    color: #dfdfdf;
+}
+
+#workTab {
+    transform: translateY(0px);
+    transition: 0.3s ease-in-out;
+}
+
+#homeContent>h4 {
+    align-self: flex-start;
+    animation: fadeLeftAnimation ease 2s;
+    animation-iteration-count: 1;
+}
+
+#homeContent>h5 {
+    align-self: flex-end;
+    animation: fadeRightAnimation ease 4s;
+    animation-iteration-count: 1;
+}
+
+#workTab {
+    width: 205px;
+    animation: fadeUpAnimation ease 5.5s;
+    animation-iteration-count: 1;
+}
+
+#workTab:hover {
+    transform: translateY(-8px)
+}

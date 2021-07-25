@@ -58,7 +58,7 @@ a, .title, .navbar-item {
     height: 207px;
     margin: auto;
     display: flex;
-    box-shadow: 0px 10px 25px 5px #242424;
+    box-shadow: 0px 10px 25px 5px #1b1b1b;
 }
 
 #headshotBox, #headshotImg {
@@ -78,6 +78,10 @@ a, .title, .navbar-item {
     width: 85%;
     background-color: rgb(27, 27, 27);
     box-shadow: 0px 20px 25px rgb(27, 27, 27);
+}
+
+a.box:hover {
+
 }
 
 /* Effects */
