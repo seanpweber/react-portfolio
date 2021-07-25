@@ -19,7 +19,7 @@ class Work extends Component {
 
     render () {
         return <div id="work" class="box">
-            <p id="workContainer" class="title is-3">Work</p>
+            <p id="workContainer" class="title is-3">My Work</p>
             <div class="workBox">
                 {
                     this.state.projects.map( project =>
@@ -36,7 +36,7 @@ class Work extends Component {
                                     </p>
                             </div>
                         
-                            <div id="workDescription" class="content">
+                            <div id="workDescription" class="content has-text-justified">
                                 {project.description}
                             </div>
                         </div>

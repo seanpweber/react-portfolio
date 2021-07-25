@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import '../styles/contact.css';
+import '../styles/animation.css';
 
 
 
@@ -15,7 +16,7 @@ class Contact extends Component {
                     Have an idea or want to inquire about my work? I'd be happy to get in touch.
                 </h5>
                 <h6 class="title is-6">
-                    I can be reached at any of the links below:
+                    I can be reached at any of the following links:
                 </h6>
             </div>
             <div id="linksBox">

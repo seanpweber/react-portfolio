@@ -26,13 +26,16 @@
     flex-direction: column;
 }
 
-h5 {
+#contactPara>h5 {
     text-align: left;
+    animation: fadeLeftAnimation ease 2s;
+    animation-iteration-count: 1;
 }
 
-h6 {
+#contactPara>h6 {
     /* margin: auto auto; */
     text-align: right;
+    animation: fadeRightAnimation ease 4s;
 }
 
 #linksBox{
@@ -40,6 +43,8 @@ h6 {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    animation: fadeUpAnimation ease 5.5s;
+    animation-iteration-count: 1;
 }
 
 #links {
