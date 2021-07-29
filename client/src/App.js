@@ -4,9 +4,8 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Anchor from './components/Anchor';
 import Home from './components/Home';
-import Headshot from './components/Headshot';
 import About from './components/About';
-import Work from './components/Work';
+import WorkHC from './components/WorkHC';
 import Contact from './components/Contact';
 import Email from './components/Email';
 import Footer from './components/Footer';
@@ -27,7 +26,7 @@ function App() {
           <div className="padding">
             <Route exact path="/" component={Home} />
             <Route exact path="/about" component={About} />
-            <Route exact path="/work" component={Work} />
+            <Route exact path="/work" component={WorkHC} />
             <Route exact path="/contact" component={Contact} />
             <Route exact path="/contact/email" component={Email} />
           </div>
