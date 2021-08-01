@@ -21,7 +21,7 @@ class Work extends Component {
         return <div id="work" class="box">
             <p id="workContainer" class="title is-3">My Work</p>
             <div class="workBox">
-                    <a class="card" href="vinovr-experience.herokuapp.com" rel="noreferrer" target="_blank">
+                    <a class="card" href="https://vinovr-experience.herokuapp.com" rel="noreferrer" target="_blank">
                         <div class="card-image">
                             <a>
                                 <img class="workCardImg" alt="alt-text" src="https://github.com/seanpweber/Aframe-VinoVR/blob/main/client/src/images/aframescreenshot.png?raw=true" />
@@ -39,7 +39,7 @@ class Work extends Component {
                             </div>
                         </div>
                     </a>
-                    <a class="card" href="petable.herokuapp.com" rel="noreferrer" target="_blank">
+                    <a class="card" href="https://petable.herokuapp.com" rel="noreferrer" target="_blank">
                         <div class="card-image">
                             <a>
                                 <img class="workCardImg" alt="alt-text" src="https://github.com/seanpweber/pet-able/raw/main/public/images/petable.png" />
